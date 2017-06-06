@@ -1,0 +1,24 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="{{ site.baseurl }}/">{% include image.html name="logo_small.png" %}</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        {% for nav in site.data.nav %}
+          {% if nav.title == page.title %}
+             <li class="nav-item active">
+               <a class="nav-link" href="{{ nav.url }}">{{ nav.title }}</a>
+             </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

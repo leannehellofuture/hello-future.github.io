@@ -1,0 +1,16 @@
+<ul class="nav flex-column">
+  {% for category in site.categories %}
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ category | first }}</a>
+      <div class="dropdown-menu">
+        {% for posts in category %}
+          {% for post in posts limit:1 %}
+            {% if post.url %}
+              <a class="dropdown-item" href="{{ post.url }}">{{ post.title }}</a>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

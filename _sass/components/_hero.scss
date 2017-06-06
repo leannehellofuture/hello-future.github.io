@@ -1,0 +1,50 @@
+$images: 3;
+
+.hero {
+  height: calc(100vh - 57px);
+  width: 100%;
+  overflow: hidden;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+
+	.hero-slider {
+		width: $images * 100vw;
+		animation: slide 30s infinite;
+		-moz-animation: slide 30s infinite;
+		-webkit-animation: slide 30s infinite;
+		-o-animation: slide 30s infinite;
+
+		@for $i from 0 to $images {
+			.hero-img:nth-child(#{$i + 1}) {
+				 background-image: url(../assets/images/hero/image_0#{$i + 1}.jpg);
+			}
+		}
+	}
+
+  .hero-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+		height: calc(100vh - 57px);
+		width: 100vw;
+		float: left;
+  }
+}
+
+@for $i from 0 to $images {
+  .hero-img-#{$i + 1} {
+     background-image: url(../assets/images/home/image_0#{$i + 1}.jpg);
+  }
+}
+
+@keyframes slide{
+	$gap: 100 / $images;
+
+	@for $i from 0 to $images {
+		$n: $i + 1;
+		$start: $gap * $i;
+		$end: $gap * $n - 4;
+		#{$start}%{margin-left: -($i * 100vw);}
+		#{$end}%{margin-left: -($i * 100vw);}
+	}
+	100%{margin-left: 0px;}
+}

@@ -1,0 +1,10 @@
+<div class="card">
+  {% if include.post.image %}
+    <img class="card-img-top" src="..." alt="Card image cap">
+  {% endif %}
+  <div class="card-block">
+    <h4 class="card-title">{{ include.post.title }}</h4>
+    <p class="card-text">{{ include.post.excerpt }}</p>
+    <a href="{{include.post.url}}" class="btn">Read more</a>
+  </div>
+</div>

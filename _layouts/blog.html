@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="row">
+        <div class="col-2">
+          {% include blog_menu.html %}
+        </div>
+        <div class="col-10">
+          <h1 class="display-4">{{ page.title }}</h1>
+          <p class="lead">{{ page.date | date: '%B %d, %Y' }}</p>
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+    {% include javascript.html %}
+  </body>
+
+</html>

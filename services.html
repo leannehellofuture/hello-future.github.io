@@ -1,0 +1,58 @@
+---
+layout: default
+title: Services
+excerpt: |
+  Test excerpt
+---
+<div class="container-fluid text-center">
+  <h4 class="mt-4">Pricing</h4>
+  <p>To achieve the best outcome, the services offered below are delivered face to face and for your convenience we come to you (aside from the CV Check which can be done via email).  The prices include the cost of travel provided they are within the North-West or Central Auckland service area.*</p>
+  <h6>Packages</h6>
+  <div class="row">
+    <div class="col-4">
+      <div class="card card-outline-primary">
+        <div class="card-block">
+          <h3 class="card-title">Coaching for school leavers</h3>
+          <p class="card-text">2 sessions focused around goal setting and next steps.</p>
+        </div>
+        <div class="card-footer text-muted">$185</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card card-outline-primary">
+        <div class="card-block">
+          <h3 class="card-title">Ultimate grad package</h3>
+          <p class="card-text">CV, LinkedIn Profile, Cover Letter and Interview preparation.</p>
+        </div>
+        <div class="card-footer text-muted">$150</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card card-outline-primary">
+        <div class="card-block">
+          <h3 class="card-title">Quarter life crisis remedy</h3>
+          <p class="card-text">3 coaching sessions to help you identify and live your true calling.</p>
+        </div>
+        <div class="card-footer text-muted">$250</div>
+      </div>
+    </div>
+  </div>
+  <h6>Individual services</h6>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for service in site.data.services %}
+        <tr>
+          <td>{{ service.name }}</td>
+          <td>{{ service.cost }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p>*Service area - 20km radius of Te Atatu Peninsula, Auckland. Outside of this area additional travel charges will apply.</p>
+</div>

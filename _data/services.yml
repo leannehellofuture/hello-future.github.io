@@ -1,0 +1,20 @@
+- name: CV Check / proof read with comments and suggestions for improvement
+  cost: $30
+
+- name: CV Creation from scratch + LinkedIn profile
+  cost: $85
+
+- name: CV Rewrite + LinkedIn profile
+  cost: $65
+
+- name: Cover Letter
+  cost: $50
+
+- name: CV Rewrite and Cover Letter
+  cost: $80
+
+- name: Interview preparation coaching
+  cost: $100 per 45 min session
+
+- name: Career coaching
+  cost: $100 per 45 min session
